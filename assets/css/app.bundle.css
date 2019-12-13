@@ -3634,11 +3634,11 @@ body {
 }
 
 .rgba-black-strong {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .rgba-red-light {
-    background-color: rgba(255, 0, 0, 0.65);
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 
@@ -3659,11 +3659,11 @@ body {
     color: black;
 }
 
-.font-weight-middle{
+.font-weight-middle {
     font-weight: 400;
 }
 
-.navbar a.navbar-brand{
+.navbar a.navbar-brand {
     font-size: 25px;
 }
 
@@ -3690,7 +3690,7 @@ body {
     background-color: rgba(0, 0, 255, 0.65);
 }
 
-#contact{
+#contact {
     min-height: 100vh;
 }
 
@@ -3705,7 +3705,7 @@ body {
     min-height: 100vh;
 }
 
-#asite .jumbotron{
+#asite .jumbotron {
     background-color: darkcyan;
     min-height: 35vh !important;
 }
@@ -3721,6 +3721,16 @@ body {
 #projects {
     background-color: #f0fff6;
 }
+
+.my-projects{
+    border: #ffc107 solid 2px;
+}
+
+.project-img{
+    width: 400px;
+    height: 300px;
+}
+
 .divider {
     display: -webkit-box;
     display: flex;
@@ -3790,13 +3800,35 @@ body {
     }
 }
 
-.offset-right-2{
+@media (min-width: 960px) {
+    .offset-lg-right-1 {
+        margin-right: 8.33333333%;
+    }
+
+    .offset-lg-right-3 {
+        margin-right: 25%;
+    }
+
+    .offset-lg-right-2 {
+        margin-right: 16.66666667%;
+    }
+}
+
+.offset-right-2 {
     margin-right: 16.66666667%;
 }
 
 /*Footer*/
 footer.footer {
     background-color: #e0edf0;;
+}
+
+footer .my-card {
+    height: 210px;
+}
+
+.contact {
+    color: rgb(103, 44, 44)
 }
 
 /************************* Asite *************************/
@@ -3808,18 +3840,20 @@ footer.footer {
 }
 
 /*Beacon*/
-#beacon{
+#beacon {
     background-color: cornflowerblue;
 }
 
 /*Video*/
-#video{
+#video {
     background-image: url(".././images/tile.jpg");
 }
 
 /*Slide Image*/
-.slide-img{
+.slide-img,
+.my-slide {
     height: 550px;
+    width: 350px;
 }/*!
  * Font Awesome Free 5.11.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
