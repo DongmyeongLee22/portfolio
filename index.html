@@ -16,7 +16,7 @@
 ====================================================================== -->
 <nav class="navbar navbar-expand-lg navbar-transparent rgba-black-light fixed-top py-2" id="mainNav">
     <div class="container">
-        <a class="navbar-brand text-white" href="#portfolio">LeeDongMyeong</a>
+        <a class="navbar-brand text-white" href="#portfolio">LEE DONG MYEONG</a>
 
         <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler border-white" data-target="#navbarResponsive" data-toggle="collapse"
@@ -51,7 +51,7 @@
             <h1 class="display-4 font-weight-bold d-none d-md-block">신입 개발자 이동명</h1>
             <h1 class="display-4 font-weight-bold d-block d-md-none">신입 개발자<br>이동명</h1>
             <hr class="hr w-75">
-            <p class="lead">서버 및 통신에 관심이 많아 백엔드 개발자가 되고싶은 이동명입니다.</p>
+            <p class="lead">서버 및 통신에 관심이 많아 서버 백엔드 개발자가 되고싶은 이동명입니다.</p>
             <a class="btn btn-danger btn-lg mt-3" href="#about">Learn More</a>
         </div>
     </div>
@@ -77,17 +77,19 @@
                         자바 언어 기반인 Spring framework를 공부하고 있습니다. Spring의 기반이 되는 Core를 비롯하여 Spring
                         Web MVC, Spring Security, Spring Data JPA등 스프링의 다양한 기술들을 적용하여 자그마한 프로젝트들을 만들어보며 기술들을 사용해보고 있습니다.
                         JPA 통해 관계형 데이터베이스를 관리하고 있습니다. 연관 관계 설정 시 지연 로딩 설정에 대한 중요성을 알고 있으며 패치 조인이나 배치 쿼리를 이용하여 N+1문제를
-                        해결하는
-                        방법도 공부하였습니다. 비록 수많은 데이터를 관리해보지는 않았지만 어떤 식으로 쿼리를 짜고 어떤 식으로 테이블을 설계해야 트래픽이 많은 환경에서도 효율적인 작업이 이루어질
+                        해결하는 방법도 공부하였습니다.
+                        비록 수많은 데이터를 관리해보지는 않았지만 어떤 식으로 쿼리를 짜고 어떤 식으로 테이블을 설계해야 트래픽이 많은 환경에서도 효율적인 작업이 이루어질
                         수 있는지에 대해 알아보기 위해 노력을 하고 있습니다. 아마존 웹 서비스를 이용해 EC2 서버와 RDS를 통해 MariaDB를 구축하였습니다. 그리고 Travis CI와
                         AWS Code Deploy, S3를 이용해 원격저장소에 PUSH만 하여도 자동으로 배포할 수 있게 하고 Nginx를 통해 무중단 배포를 가능하게 해본 경험이 있습니다.
                         <br>
 
                         &nbsp &nbsp REST API 개발을 통해 REST DOCS를 통한 문서화 작업을 해보았고 클라이언트와 서버 간의 독립적인 개발이 가능하고 진정한 REST API
-                        통신이 요구하는
-                        HATEOAS와 Self-Describe Messages에 대해 이해하고 있습니다. 현재는 스프링 시큐리티를 이용하여 구글, 네이버의 Oauth2 토큰 발급 서비스를
-                        이용하여 자그마한 쇼핑몰 프로젝트를 개발 중입니다. 그리고 백 엔드만이 아닌 다양한 플랫폼을 경험해보고자 웹팩을 이용해 모듈 번들링를 통해 현재 이 페이지를 제작하였고
+                        통신이 요구하는 HATEOAS와 Self-Describe Messages에 대해 이해하고 있습니다. 스프링 시큐리티를 이용하여 직접 Oauth 2.0 인증 서버, 리소스
+                        서버를 설정하여
+                        Token 인증을 구현해보았으며 현재는 구글, 네이버의 Oauth 2.0 서비스를 이용하여 로그인 연동하는 자그마한 프로젝트를 개발 중입니다.
+                        그리고 백엔드만이 아닌 다양한 플랫폼을 경험해보고자 웹팩을 이용해 모듈 번들링을 통해 현재 이 페이지를 제작하였고
                         부트스트랩을 통해 테마를 사용하지 않고 직접 만들었습니다.
+                        그리고 꾸준히 깃헙, Blog에 공부한 내용들을 정리하고 있습니다. 링크 주소는 사이트 하단에 있습니다.
                     </p>
                     <hr class="mt-5">
                 </div>
@@ -119,22 +121,32 @@
                 <div class="col-md-12">
                     <h2 class="mb-4 text-dark">PROJECT 1</h2>
                 </div>
-                <div class="col-md-6">
-                    <a class="text-black text-decoration-none lead"
-                       href="http://ec2-15-164-143-254.ap-northeast-2.compute.amazonaws.com/docs/index.html"
-                       target="_blank">
-                        <img alt="프로젝트 1" class="img-fluid shadow-xl project-img"
-                             src="assets/images/portfolio/port3.jpg">
-                    </a>
-
-                </div>
                 <div class="col-md-6 my-auto">
                     <a class="text-black text-decoration-none lead"
                        href="http://ec2-15-164-143-254.ap-northeast-2.compute.amazonaws.com/docs/index.html"
                        target="_blank">
-                        <p class="mt-3">
-                            비콘을이용한 출석체크 및 어플제한 시스템입니다. <br>
-                            졸업작품을 준비하면서 제작하였고 팀프로젝트 였으나 개발은 혼자 담당하였습니다.
+                        <img alt="프로젝트 1" class="img-fluid shadow-xl project-img"
+                             src="assets/images/portfolio/portfolio.png">
+                        <br>
+                    </a>
+
+                    <div class="mt-4">
+                        <a href="https://github.com/DongmyeongLee22/Asite-Server" target="_blank" style="color: black">
+                            <i class="fab fa-github fa-3x"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="col-md-6 my-auto mt-md-3">
+                    <a class="text-black text-decoration-none lead"
+                       href="http://ec2-15-164-143-254.ap-northeast-2.compute.amazonaws.com/docs/index.html"
+                       target="_blank">
+                        <p class="mt-3 text-left" style="font-size: 1rem">
+                            스프링 REST API 통신 공부를 위해 학생 회원가입, 시간표 CURD, 출석 체크 기능을 구현하였으며
+                            AWS에 배포 자동화를 하였고 REST DOCS로 문서화를 하였습니다. <br>
+                            Client 개발자가 문서화된 가이드를 통해
+                            독자적으로 개발이 가능하도록 해보았습니다. REST DOCS 문서화는 테스트코드 작성으로 하였습니다. <br>
+                            그림 하단에 Repository 주소를 첨부하였습니다.
                         </p>
                         <hr>
                         <h5 class="font-weight-bold">사용기술</h5>
@@ -150,7 +162,7 @@
                                 <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/jpa.png">
                             </div>
                             <div class="col-3">
-                                <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/thymeleaf.png">
+                                <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/nginx.png">
                             </div>
                         </div>
                         <div class="row mt-3">
@@ -158,7 +170,7 @@
                                 <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/aws.png">
                             </div>
                             <div class="col-3">
-                                <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/mysql.png">
+                                <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/maria.png">
                             </div>
                             <div class="col-3">
                                 <img alt="" class="stack-img shadow-sm" src="assets/images/portfolio/gradle.png">
@@ -176,16 +188,16 @@
                     <h2 class="mb-4 text-dark">PROJECT 2</h2>
                 </div>
                 <div class="col-md-6">
-                    <a class="text-black text-decoration-none lead" href="/asite.html">
+                    <a class="text-black text-decoration-none lead" href="portfolio/asite.html">
                         <img alt="프로젝트 2" class="img-fluid shadow-xl project-img"
                              src="assets/images/portfolio/project2.jpg">
                     </a>
                 </div>
-                <div class="col-md-6 my-auto">
+                <div class="col-md-6 my-auto mt-3 mt-md-0">
                     <a class="text-black text-decoration-none lead" href="/asite.html">
                         <p class="mt-3">
                             비콘을이용한 출석체크 및 어플제한 시스템입니다. <br>
-                            졸업작품을 준비하면서 제작하였고 팀프로젝트 였으나 개발은 혼자 담당하였습니다.
+                            자세한 설명은 프로젝트 페이지에 기재되어 있습니다.
                         </p>
                         <hr>
                         <h5 class="font-weight-bold">사용기술</h5>
@@ -447,7 +459,7 @@
 
     <ul class="list-unstyled d-flex justify-content-center mt-5" id="social-icons" style="margin-bottom: 50px">
         <li class="mx-2 mr-3">
-            <a href="https://github.com/" target="_blank" style="color: black">
+            <a href="https://github.com/DongmyeongLee22/" target="_blank" style="color: black">
                 <i class="fab fa-github fa-3x"></i>
             </a>
         </li>
