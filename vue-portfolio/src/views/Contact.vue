@@ -1,6 +1,5 @@
 <template>
     <div class="text-center">
-        <h1>Contact</h1>
     </div>
 </template>
 

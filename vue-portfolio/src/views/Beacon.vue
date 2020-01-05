@@ -22,12 +22,12 @@
 
         <v-container>
             <div class="row">
-                <v-col cols="12" md="6" class="pa-5 text-center mx-auto">
+                <v-col class="pa-5 text-center ma-auto" cols="12" sm="6">
                     <v-img alt="beacon"
-                           class="img-fluid shadow-lg wow fadeInLeft mt-4"
+                           class="ma-1"
                            src="../images/asite/beacon.png"/>
                 </v-col>
-                <v-col cols="12" md="6" class="pa-4">
+                <v-col class="pa-4" cols="12" sm="6">
                     <h1>What is <span class="orange--text font-weight-bold">Beacon?</span></h1>
                     <br>
                     <p class="lead text-white">
@@ -41,73 +41,80 @@
 
         <v-container>
             <h1>동작원리 및 순서도</h1>
-            <div class="row">
-                <v-col cols="12" md="6">
+            <v-row align="center" class="pa-5">
+                <v-col cols="12" sm="6">
                     <v-img src="..//images/asite/beaconflow.png" alt="비콘 동작 원리" class="mt-5 elevation-5"/>
                     <v-img src="../images/asite/flow.png" alt="앱 동작원리" class="mt-5 elevation-5"/>
                 </v-col>
-                <v-col cols="12" md="6" class="mt-5">
+                <v-col class="mt-5" cols="12" sm="6">
                     <v-img src="../images/asite/structure.png" alt="흐름도" width="394" height="561"
                            class="mx-auto elevation-5"/>
                 </v-col>
-            </div>
+            </v-row>
         </v-container>
 
         <v-container>
             <h1>시연 영상</h1>
-            <v-row>
-                <v-col cols="12" md="6" class="mt-5 text-center">
+            <v-row justify="center">
+                <v-col class="mt-5 text-center" cols="12" lg="4" sm="6">
                     <iframe class="mx-auto"
-                            width="349" height="500" src="https://www.youtube.com/embed/tXAw0tNN0PI"
+                            height="500" src="https://www.youtube.com/embed/tXAw0tNN0PI" width="300"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
 
                 </v-col>
-                <v-col cols="12" md="6" class="mt-5 text-center">
+                <v-col class="mt-5 text-center" cols="12" lg="4" sm="6">
                     <iframe class="shadow-xl"
-                            width="349" height="500" src="https://www.youtube.com/embed/cerwC4v7PWM"
+                            height="500" src="https://www.youtube.com/embed/cerwC4v7PWM" width="300"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
                 </v-col>
-            </v-row>
-        </v-container>
-
-        <v-container>
-            <h1>사진</h1>
-            <v-row>
-                <v-col cols="12" md="4" offset-md="1" class="mt-5">
-                    <v-carousel cycle interval="3000" :show-arrows="false">
+                <v-col class="mt-5 text-center" cols="12" lg="4" sm="6">
+                    <v-carousel :show-arrows="false" class="my-image mx-auto" cycle interval="5000">
                         <v-carousel-item
-                                v-for="(item,i) in items"
                                 :key="i"
-                                :src="require('../images/asite/' + item.img)"
                                 reverse-transition="fade-transition"
                                 transition="fade-transition"
-                        ></v-carousel-item>
-                    </v-carousel>
-                </v-col>
-                <v-col cols="12" md="4" offset-md="2" class="mt-5">
-                    <v-carousel cycle interval="3000" :show-arrows="false">
-                        <v-carousel-item
                                 v-for="(item,i) in items"
-                                :key="i"
-                                :src="require('../images/asite/' + item.img)"
-                                reverse-transition="fade-transition"
-                                transition="fade-transition"
-                        ></v-carousel-item>
+                        >
+                            <img :src="require('../images/asite/' + item.img)" alt="작품사진" class="my-image"/>
+                        </v-carousel-item>
                     </v-carousel>
                 </v-col>
             </v-row>
         </v-container>
 
+        <v-container class="award-container">
+            <h1>수상</h1>
+            <v-row align="center">
+                <v-col class="mt-5" cols="6" md="3">
+                    <v-img class="mx-auto" src="../images/asite/award1.png" width="230"/>
+                </v-col>
+                <v-col class="mt-5" cols="6" md="3">
+                    <v-img class="mx-auto" src="../images/asite/award2.png" width="230"/>
+                </v-col>
+                <v-col class="mt-5" cols="12" md="6">
+                    <div class="pa-3">
+                        <h1>What is <span class="orange--text font-weight-bold">Beacon?</span></h1>
+                        <br>
+                        <p class="lead text-white">
+                            무선통신장치로써 블루투스 4.0기반의 프로토콜을 사용해 주변에 있는 기기들에게 자신의 고유 식별 정보를 전달하는 장치입니다. 장점으로는 저전력 무선통신이 가능하여
+                            디바이스들의 전력 소모에 대한 걱정을 덜 하면서 사용할 수 있습니다. 또한 기존의 NFC는 10cm 이내에서만 작동이 가능한 반면, 비콘은 이론상 최대
+                            50~100m까지도
+                            가능합니다. </p>
+                        <hr class="mt-4">
+                    </div>
+                </v-col>
+            </v-row>
+        </v-container>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Capstone",
-        data(){
-            return{
+        name: "Beacon",
+        data() {
+            return {
                 items: [
                     {
                         img: 'notice.png',
@@ -122,11 +129,23 @@
                         img: 'lock.png',
                     },
                 ],
+                awards: [
+                    {
+                        img: 'award1.png',
+                    },
+                    {
+                        img: 'award2.png',
+                    },
+                ],
             }
         }
     }
 </script>
 
 <style scoped>
+    .my-image {
+        height: auto;
+        width: 300px;
+    }
 
 </style>

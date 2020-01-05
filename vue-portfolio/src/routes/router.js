@@ -3,7 +3,7 @@ import VueRouter from "vue-router"
 import AboutMe from "../views/AboutMe";
 import Contact from "../views/Contact";
 import Projects from "../views/Projects";
-import Capstone from "../views/Capstone";
+import Beacon from "../views/Beacon";
 
 Vue.use(VueRouter);
 
@@ -26,9 +26,9 @@ export default new VueRouter({
             component: Projects
         },
         {
-            path: '/capstone',
+            path: '/beacon',
             name: '',
-            component: Capstone
+            component: Beacon
         }
     ]
 })

@@ -1,7 +1,7 @@
 <template>
     <div class="project-container mx-5 my-5">
         <v-row>
-            <v-col cols="12" md="6" v-for="project in projects" :key="project.title" class="my-5">
+            <v-col :key="project.title" class="mt-5" cols="12" md="6" style="padding: 2rem" v-for="project in projects">
                 <v-hover v-slot:default="{ hover }">
                     <v-card
                             max-width="600"
@@ -64,7 +64,15 @@
                         ]
                     },
                     {
-                        title: '프로젝트 제목', content: 'qwdddddddddddddddqwdqwdqwd', picture: '', router:'/capstone',
+                        title: '프로젝트 제목', content: 'qwdddddddddddddddqwdqwdqwd', picture: '', router: '/beacon',
+                        skills: [
+                            {icon: "mdi-language-javascript", color: "yellow"},
+                            {icon: "mdi-vuejs", color: "#41B883"},
+                            {icon: "mdi-vuetify", color: "#78C1F8"},
+                        ]
+                    },
+                    {
+                        title: '프로젝트 제목', content: 'qwdddddddddddddddqwdqwdqwd', picture: '', router: '/',
                         skills: [
                             {icon: "mdi-language-javascript", color: "yellow"},
                             {icon: "mdi-vuejs", color: "#41B883"},
