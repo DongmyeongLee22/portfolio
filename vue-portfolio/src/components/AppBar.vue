@@ -1,19 +1,40 @@
 <template>
+
     <nav>
-        <v-app-bar flat app>
-                <v-icon v-if="drawer === false" @click="drawer = true">
-                    mdi-menu-right-outline
-                </v-icon>
-                <v-icon v-else @click="drawer = false">
-                    mdi-menu-left-outline
-                </v-icon>
+        <!-- SECTION: 상단 AppBar
+        ====================================================================== -->
+        <v-app-bar app color="#fafafa" flat>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
             <v-spacer/>
             <v-toolbar-title class="text-uppercase grey--text font-weight-bold toolbar-title">
                 <h2>{{this.$route.name}}</h2>
             </v-toolbar-title>
             <v-spacer/>
-        </v-app-bar>
 
+            <!-- 오른쪽 상단 Menu -->
+            <v-menu offset-y>
+                <template v-slot:activator="{ on }">
+                    <v-icon v-on="on">
+                        mdi-apps
+                    </v-icon>
+                </template>
+                <v-list>
+                    <div :key="link.text" v-for="link in links">
+                        <v-list-item :to="link.route" v-if="link.route != null">
+                            <v-list-item-title>{{link.text}}</v-list-item-title>
+                        </v-list-item>
+                        <v-list-item :href="link.href" target="_blank" v-else>
+                            <v-list-item-title>{{link.text}}</v-list-item-title>
+                        </v-list-item>
+                    </div>
+                </v-list>
+            </v-menu>
+        </v-app-bar>
+        <!-- SECTION: 상단 AppBar -->
+
+
+        <!-- SECTION: 옆쪽 Drawer
+        ====================================================================== -->
         <v-navigation-drawer app v-model="drawer" class="cyan lighten-2">
             <v-col class="mt-5 text-center">
                 <v-avatar size="150">
@@ -46,6 +67,7 @@
                 </div>
             </v-list>
         </v-navigation-drawer>
+        <!-- SECTION: 옆쪽 Drawer -->
     </nav>
 </template>
 
@@ -57,7 +79,7 @@
                 drawer: true,
                 links: [
                     {icon: 'mdi-account', text: 'AboutMe', route: '/'},
-                    {icon: 'mdi-folder-multiple', text: 'My Projects', route: '/projects'},
+                    {icon: 'mdi-folder-multiple', text: 'Projects', route: '/projects'},
                     {icon: 'mdi-phone', text: 'Contact', route: '/contact'},
                     {icon: 'mdi-github-circle', text: 'GitHub', href: 'https://github.com/DongmyeongLee22'},
                     {icon: 'mdi-blogger', text: 'Blog', href: 'https://sun-22.tistory.com/'},
@@ -68,11 +90,11 @@
 </script>
 
 <style scoped>
-    .my-hr{
+    .my-hr {
         border: solid 1px white;
     }
 
-    .toolbar-title{
+    .toolbar-title {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);

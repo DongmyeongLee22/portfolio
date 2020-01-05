@@ -1,8 +1,10 @@
 <template>
     <div>
-        <div class="grey lighten-4">
+        <!-- SECTION: 자기소개
+        ====================================================================== -->
+        <div style="background-color: #fafafa">
             <v-container>
-                <v-row>
+                <v-row class="pa-3">
                     <v-col cols="12" md="6">
                         <h1>이 동 명</h1>
                         <div class="my-3 pl-3">
@@ -37,7 +39,6 @@
                             </v-col>
                         </v-row>
 
-
                     </v-col>
                     <v-col cols="12" md="6" class="my-auto">
                         <v-img
@@ -49,46 +50,55 @@
                 </v-row>
             </v-container>
         </div>
-        <v-container my-4>
-            <h1>What I Do</h1>
-            <div class="py-3 px-5 aboutme">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci, consectetur dignissimos
-                distinctio dolor doloremque esse est et eum expedita explicabo id laudantium molestias mollitia neque
-                qui sequi ullam voluptatem. Check My
-                <router-link to="/projects" class="red--text">Projects</router-link>
-            </div>
-        </v-container>
-        <v-container>
-            <v-row justify="center">
-                <v-col cols="10" sm="6" md="4" lg="3" v-for="card in cards" :key="card.title">
-                    <v-card class="mx-auto px-2" outlined max-width="27  0">
-                        <v-list-item>
-                            <v-list-item-content>
-                                <v-row>
-                                    <v-col cols="3" v-for="skill in card.skills" :key="skill.icon">
-                                        <v-icon v-if="skill.color !== undefined" class="mr-3" :color="skill.color"
-                                                x-large>
-                                            {{skill.icon}}
-                                        </v-icon>
-                                        <v-img v-else height="40" width="40"
-                                               aspect-ratio="1"
-                                               v-bind:src="require('../images/cardImg/' + skill.img)"/>
-                                    </v-col>
-                                </v-row>
-                                <h3 class="my-2 font-weight-bold">
-                                    {{card.title}}
-                                </h3>
+        <!-- SECTION: 자기소개 -->
 
-                                <v-card-text class="py-1">
-                                    {{contents[card.contentNum]}}
-                                </v-card-text>
-                            </v-list-item-content>
-                        </v-list-item>
-                    </v-card>
-                </v-col>
+        <!-- SECTION: Skills
+        ====================================================================== -->
+        <div class="white">
+            <v-container my-4>
+                <h1 class="mb-3">What I Do</h1>
+                <div class="py-3 px-5 aboutme">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci, consectetur
+                    dignissimos
+                    distinctio dolor doloremque esse est et eum expedita explicabo id laudantium molestias mollitia
+                    neque
+                    qui sequi ullam voluptatem. Check My
+                    <router-link class="red--text" to="/projects">Projects</router-link>
+                </div>
+            </v-container>
+            <v-container>
+                <v-row justify="center">
+                    <v-col :key="card.title" cols="10" lg="3" md="4" sm="6" v-for="card in cards">
+                        <v-card class="mx-auto px-2" color="#fafafa" max-width="270">
+                            <v-list-item>
+                                <v-list-item-content>
+                                    <v-row>
+                                        <v-col :key="skill.icon" cols="3" v-for="skill in card.skills">
+                                            <v-icon :color="skill.color" class="mr-3" v-if="skill.color !== undefined"
+                                                    x-large>
+                                                {{skill.icon}}
+                                            </v-icon>
+                                            <v-img aspect-ratio="1" height="40"
+                                                   v-bind:src="require('../images/cardImg/' + skill.img)"
+                                                   v-else
+                                                   width="40"/>
+                                        </v-col>
+                                    </v-row>
+                                    <h3 class="my-2 font-weight-bold">
+                                        {{card.title}}
+                                    </h3>
 
-            </v-row>
-        </v-container>
+                                    <v-card-text class="py-1">
+                                        {{contents[card.contentNum]}}
+                                    </v-card-text>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-card>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </div>
+        <!-- SECTION: Skills -->
     </div>
 </template>
 

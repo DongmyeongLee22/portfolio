@@ -29,6 +29,6 @@ export default new VueRouter({
             path: '/beacon',
             name: '',
             component: Beacon
-        }
+        },
     ]
 })
