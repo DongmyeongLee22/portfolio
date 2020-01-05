@@ -8,8 +8,8 @@
                     mdi-menu-left-outline
                 </v-icon>
             <v-spacer/>
-            <v-toolbar-title class="text-uppercase grey--text font-weight-bold">
-                <h3>PortFolio</h3>
+            <v-toolbar-title class="text-uppercase grey--text font-weight-bold toolbar-title">
+                <h2>{{this.$route.name}}</h2>
             </v-toolbar-title>
             <v-spacer/>
         </v-app-bar>
@@ -17,14 +17,14 @@
         <v-navigation-drawer app v-model="drawer" class="cyan lighten-2">
             <v-col class="mt-5 text-center">
                 <v-avatar size="150">
-                    <img src="../images/temp-face.png" alt="avatar"/>
+                    <img src="../images/face.png" alt="avatar"/>
                 </v-avatar>
-                <h2 class="white--text mt-3">
+                <h2 class="white--text my-3">
                     이 동 명
                 </h2>
-                <span class="white--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                <span class="white--text">백엔드 개발자를 희망하는 신입 개발자 이동명입니다.</span>
             </v-col>
-            <hr class="ma-3 white"/>
+            <hr class="ma-3 white my-hr"/>
             <v-list>
                 <div v-for="link in links" :key="link.text">
                     <v-list-item v-if="link.route != null" router :to="link.route" class="cyan lighten-2">
@@ -58,14 +58,24 @@
                 links: [
                     {icon: 'mdi-account', text: 'AboutMe', route: '/'},
                     {icon: 'mdi-folder-multiple', text: 'My Projects', route: '/projects'},
+                    {icon: 'mdi-phone', text: 'Contact', route: '/contact'},
                     {icon: 'mdi-github-circle', text: 'GitHub', href: 'https://github.com/DongmyeongLee22'},
                     {icon: 'mdi-blogger', text: 'Blog', href: 'https://sun-22.tistory.com/'},
-                    {icon: 'mdi-phone', text: 'Contact', route: '/contact'},
-                ]
+                ],
             }
         }
     }
 </script>
 
 <style scoped>
+    .my-hr{
+        border: solid 1px white;
+    }
+
+    .toolbar-title{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
 </style>
