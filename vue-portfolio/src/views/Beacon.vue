@@ -3,7 +3,7 @@
 
         <!-- SECTION: Header
         ====================================================================== -->
-        <div class="text-center mb-5">
+        <div class="text-center pb-5 bg-light-grey">
             <h1 class="display-1 font-weight-bold mb-3">A-SITE</h1>
             <h3>비콘을 이용한 출석체크 및 어플제한 시스템</h3>
         </div>
@@ -66,7 +66,7 @@
                     </v-col>
                 </v-row>
                 <br>
-                <h1 class="mt-5">시연 영상</h1>
+                <h1 class="mt-5">시연 영상 및 작품 사진</h1>
                 <v-row justify="center">
                     <v-col class="mt-5 text-center" cols="12" lg="4" sm="6">
                         <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -100,8 +100,8 @@
 
         <!-- SECTION: 수상 내역
         ====================================================================== -->
-        <div>
-            <v-container class="award-container">
+        <div class="bg-light-grey">
+            <v-container class="award-container ">
                 <h1 class="mt-5">수상</h1>
                 <v-row align="center">
                     <v-col class="mt-5" cols="12" md="3" sm="6">
@@ -111,15 +111,10 @@
                         <v-img class="mx-auto" src="../images/project/asite/award2.png" width="230"/>
                     </v-col>
                     <v-col class="mt-5" cols="12" md="6">
-                        <div class="pa-3">
-                            <h1>What is <span class="orange--text font-weight-bold">Beacon?</span></h1>
-                            <br>
-                            <p class="lead text-white">
-                                무선통신장치로써 블루투스 4.0기반의 프로토콜을 사용해 주변에 있는 기기들에게 자신의 고유 식별 정보를 전달하는 장치입니다. 장점으로는 저전력 무선통신이
-                                가능하여
-                                디바이스들의 전력 소모에 대한 걱정을 덜 하면서 사용할 수 있습니다. 또한 기존의 NFC는 10cm 이내에서만 작동이 가능한 반면, 비콘은 이론상 최대
-                                50~100m까지도
-                                가능합니다. </p>
+                        <div class="pa-3 text-center">
+                            <h3 class="lead text-white">
+                                이 작품을 통해 교내대회 최우수상, 논문상을 수상하였습니다.
+                            </h3>
                             <hr class="mt-4">
                         </div>
                     </v-col>
@@ -177,7 +172,7 @@
     }
 
     .about {
-        background-color: #fafafa;
+        background-color: #f7f7f7;
         border: 1px solid rgba(0, 0, 0, 0.025)
     }
 

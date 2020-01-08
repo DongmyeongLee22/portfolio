@@ -7,9 +7,9 @@ import Beacon from "../views/Beacon";
 
 Vue.use(VueRouter);
 
-export default new VueRouter({
+const router = new VueRouter({
     mode: 'history',
-    routes:[
+    routes: [
         {
             path: '/',
             name: 'About Me',
@@ -31,4 +31,10 @@ export default new VueRouter({
             component: Beacon
         },
     ]
-})
+});
+
+export {router}
+
+router.afterEach(() => {
+    window.scrollTo(0, 0);
+});

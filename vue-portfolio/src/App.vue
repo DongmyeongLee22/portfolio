@@ -29,4 +29,8 @@
             max-width: 1185px !important;
         }
     }
+
+    .bg-light-grey {
+        background-color: #f7f7f7;
+    }
 </style>

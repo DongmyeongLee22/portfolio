@@ -3,10 +3,10 @@
     <nav>
         <!-- SECTION: 상단 AppBar
         ====================================================================== -->
-        <v-app-bar app color="#fafafa" flat>
+        <v-app-bar app color="#f7f7f7" flat>
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
             <v-spacer/>
-            <v-toolbar-title class="text-uppercase grey--text font-weight-bold toolbar-title">
+            <v-toolbar-title class="text-uppercase grey--text text--darken-1 font-weight-bold toolbar-title">
                 <h2>{{this.$route.name}}</h2>
             </v-toolbar-title>
             <v-spacer/>
