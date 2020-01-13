@@ -43,7 +43,7 @@
                                         <v-expansion-panels flat hover>
                                             <v-expansion-panel style="background-color: #f7f7f7">
                                                 <v-expansion-panel-header class="indigo--text font-weight-bold">
-                                                    상세설명 보기
+                                                    자세히
                                                 </v-expansion-panel-header>
                                                 <v-expansion-panel-content>{{project.content}}
                                                 </v-expansion-panel-content>
@@ -96,9 +96,12 @@
                 projects: [
                     {
                         title: 'MSA 프로젝트',
-                        content: 'qwdddddddddddddddqwdqwdqwd',
+                        content: '각자 프로젝트를 제작하는 온라인 스터디를 통해 제작하고 있는 프로젝트입니다. Spring Security OAuth2를 이용하여 권한 서버, 리소스 서버를 구축하였고' +
+                            'JWT 토큰을 통해 인증을 구현하였습니다. 현재 AWS에 서버가 구축되어 있으며 클라이언트와 서버를 구분하기 위해 클라이언트는 Netlify에 배포되어 있습니다.' +
+                            ' Git Push만으로 무중단 배포가 가능하도록 구현하였습니다. 조금씩 발전해나가면서 블로그로 만들 생각입니다. 현잰 Toast UI Editor를 통해 제가 공부한 게시글을 올리고 있습니다.' +
+                            '로그인 후 토큰 기한이 만료되면 Axios 인터셉터를 통해 refresh 토큰을 이용하여 자동으로 토큰을 재발급하고 있습니다. DEMO 버튼을 누르시면 현재' +
+                            '운영 중인 페이지를 확인하실 수 있습니다.',
                         picture: 'project1.png',
-                        router: '',
                         skills: [
                             {icon: "mdi-language-javascript", color: "yellow"},
                             {icon: "mdi-language-java", color: "red"},
@@ -124,8 +127,9 @@
                         title: 'RESTful API 개발',
                         content: `REST에 대한 이해와 REST의 구현 원칙을 지켜 RESTful API를 설계해본 프로젝트입니다.
                                   Spring HATEOAS를 통해 HATEOAS를 만족하게 했고 Spring REST Docs를 통해 문서화 작업을
-                                  수행하였습니다. 문서화는 테스트 코드 작성을 통해 이루어지므로 mock 객체를 이용한 web
-                                   통신을 통해 HTTP 요청, 응답을 문서화 하였습니다. 그 밖에 스프링 시큐리티 적용과 JPA와 QueryDsl
+                                  수행하였습니다. 문서화는 테스트 코드 작성을 통해 이루어지므로 완전한 TDD를 하진 않았지만
+                                   단위 테스트를 통해 테스트에 대한 중요성을 깨달았습니다. Mock 객체를 통해 Web
+                                   통신을 통해 HTTP 요청, 응답을 문서화하였습니다. 그 밖에 스프링 시큐리티 적용과 JPA와 QueryDsl
                                    을 이용하여 간단한 동적 쿼리를 작성해보았습니다.`,
                         picture: 'project2.png',
                         skills: [
@@ -152,7 +156,7 @@
                     {
                         title: '비콘을 이용한 스마트 출석',
                         content: `졸업작품을 준비하면서 제작한 작품입니다.
-                         이 작품을 통해 교내대회 최우수과 논문상을 수상하였습니다.
+                         이 작품을 통해 교내대회 최우수상과 논문상을 받았습니다.
                         자세한 내용은 상세페이지를 클릭하시면 됩니다.`,
                         picture: 'project3.jpg',
                         skills: [
