@@ -2,9 +2,9 @@
     <div>
         <!-- SECTION: 자기소개
         ====================================================================== -->
-        <div class="about">
-            <v-container>
-                <v-row class="pa-3">
+        <div>
+            <v-container style="margin-top: 2.5%; margin-bottom: 2.5%; background-color: #f7f7f7">
+                <v-row class="pa-3 d-none d-md-flex">
                     <v-col cols="12" md="6">
                         <h1>이 동 명</h1>
                         <div class="my-3 pl-3 about-me" v-html="aboutme">
@@ -32,6 +32,34 @@
                         />
                     </v-col>
                 </v-row>
+                <v-row class="pa-3 d-md-none">
+                    <v-col class="my-auto text-center" cols="12" md="6">
+                        <h1 class="mb-5">이 동 명</h1>
+                        <div class="picture-top mb-5">
+                            <h2 class="my-2">부경대학교 정보통신공학과</h2>
+                            <h3>학점: 4.27 / 4.5</h3>
+                            <h3 class="my-2">TOEIC: 885</h3>
+                        </div>
+                        <v-img
+                                class="grey lighten-2 face mx-auto"
+                                src="@/images/fullface.png?lazy"
+                                width="200"
+                        />
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <div class="my-3 pl-3 about-me" v-html="aboutme">
+                        </div>
+                        <br>
+                        <v-row class="text-center" justify="center">
+                            <v-btn color="pink lighten-1" outlined to="/contact">
+                                <v-icon left>
+                                    mdi-phone-hangup
+                                </v-icon>
+                                Contact
+                            </v-btn>
+                        </v-row>
+                    </v-col>
+                </v-row>
             </v-container>
         </div>
         <!-- SECTION: 자기소개 -->
@@ -50,7 +78,8 @@
             </v-container>
             <v-container>
                 <v-row justify="center">
-                    <v-col :key="card.title" cols="10" lg="3" md="4" sm="6" v-for="(card, index) in cards">
+                    <v-col :key="card.title" class="my-about-card" cols="10" md="4" sm="6"
+                           v-for="(card, index) in cards">
                         <v-card class="mx-auto" color="#f7f7f7" max-width="270" min-height="400">
                             <v-list-item>
                                 <v-list-item-content>
@@ -192,7 +221,7 @@
                     `,
 
                     //웹 기본
-                    ` Vue.js를 사용하기 주로 HTML, CSS, Bootstrap을 사용하여 포트폴리오 페이지 및 기본 로그인 및 데모 페이지들을 제작해본 경험이 있습니다.
+                    ` Vue.js를 사용하기전에 HTML, CSS, Bootstrap을 사용하여 포트폴리오 페이지 및 기본 로그인 및 데모 페이지들을 제작해본 경험이 있습니다.
                     화려하고 디자인이 멋진 페이지를 직접 생각해서 제작할 능력은 되지 않지만 와이어 프레임이 주어진다면 제작할 수 있습니다.`,
 
                     // 학교수업
@@ -218,10 +247,6 @@
 
     .left-line {
         border-left: 4px solid #41B883;
-    }
-
-    .about {
-        background-color: #f7f7f7;
     }
 
     @media (min-width: 960px)  {

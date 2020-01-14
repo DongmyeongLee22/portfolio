@@ -98,9 +98,8 @@
                         title: 'MSA 프로젝트',
                         content: '각자 프로젝트를 제작하는 온라인 스터디를 통해 제작하고 있는 프로젝트입니다. Spring Security OAuth2를 이용하여 권한 서버, 리소스 서버를 구축하였고' +
                             'JWT 토큰을 통해 인증을 구현하였습니다. 현재 AWS에 서버가 구축되어 있으며 클라이언트와 서버를 구분하기 위해 클라이언트는 Netlify에 배포되어 있습니다.' +
-                            ' Git Push만으로 무중단 배포가 가능하도록 구현하였습니다. 조금씩 발전해나가면서 블로그로 만들 생각입니다. 현잰 Toast UI Editor를 통해 제가 공부한 게시글을 올리고 있습니다.' +
-                            '로그인 후 토큰 기한이 만료되면 Axios 인터셉터를 통해 refresh 토큰을 이용하여 자동으로 토큰을 재발급하고 있습니다. DEMO 버튼을 누르시면 현재' +
-                            '운영 중인 페이지를 확인하실 수 있습니다.',
+                            ' Git Push만으로 무중단 배포가 가능하도록 구현하였습니다. 조금씩 발전해나가면서 블로그로 만들 생각입니다. 현재는 게시판을 구현하여 Toast UI Editor를 통해 제가 공부한 게시글을 올리고 있습니다.' +
+                            ' 댓글은 계층형으로 구현하였으며 JPA를 사용하여 재귀적으로 구현해 댓글 개수와는 상관없이 댓글 계층당 한번의 쿼리가 날라가도록 구현해보았습니다. 그밖에 검색, 정렬등 기본적인 게시판 기능을 구현하였습니다. ',
                         picture: 'project1.png',
                         skills: [
                             {icon: "mdi-language-javascript", color: "yellow"},
@@ -115,7 +114,7 @@
                         btns: [
                             {
                                 text: 'DEMO', icon: 'mdi-earth', color: 'blue',
-                                href: 'http://ec2-15-164-143-254.ap-northeast-2.compute.amazonaws.com'
+                                href: 'https://naughty-murdock-133815.netlify.com/'
                             },
                             {
                                 text: 'GITHUB', icon: 'mdi-github-circle', color: 'green',
