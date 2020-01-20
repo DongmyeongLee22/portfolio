@@ -1,9 +1,7 @@
 import Vue from "vue"
 import VueRouter from "vue-router"
-import AboutMe from "../views/AboutMe";
 import Contact from "../views/Contact";
 import Projects from "../views/Projects";
-import Beacon from "../views/Beacon";
 
 Vue.use(VueRouter);
 
@@ -13,22 +11,22 @@ const router = new VueRouter({
         {
             path: '/',
             name: 'About Me',
-            component: AboutMe
+            component: () => import('../views/AboutMe')
         },
         {
             path: '/contact',
             name: 'Contact',
-            component: Contact
+            component: () => import('../views/Contact')
         },
         {
             path: '/projects',
             name: 'Projects',
-            component: Projects
+            component: () => import('../views/Projects')
         },
         {
             path: '/beacon',
             name: '',
-            component: Beacon
+            component: () => import('../views/Beacon')
         },
     ]
 });

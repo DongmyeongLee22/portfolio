@@ -76,7 +76,7 @@
         name: "AppBar",
         data() {
             return {
-                drawer: true,
+                drawer: null,
                 links: [
                     {icon: 'mdi-account', text: 'AboutMe', route: '/'},
                     {icon: 'mdi-folder-multiple', text: 'Projects', route: '/projects'},
