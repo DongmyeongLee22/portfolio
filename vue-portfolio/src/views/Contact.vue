@@ -31,8 +31,7 @@
                 <v-col class="px-5 my-auto" cols="12" md="6">
                     <div class="email-form">
                         <v-form
-                                @submit="checkValidate"
-                                action="https://formspree.io/xlegqwrg"
+                                @submit.prevent="sendEmail"
                                 method="POST"
                                 novalidate
                                 ref="form"
@@ -42,21 +41,21 @@
                                     :rules="emailRules"
                                     class="mb-3"
                                     label="Email"
-                                    name="_replyto"
+                                    v-model="email"
+                                    name="user_email"
                                     type="text"
                             ></v-text-field>
                             <v-textarea
                                     :rules="contentRules"
                                     auto-grow
                                     label="Your message"
+                                    v-model="message"
                                     name="message"
                                     row-height="35"
                                     solo
 
                             >
                             </v-textarea>
-
-                            <!-- your other form fields go here -->
 
                             <v-btn :loading="loading"
                                    class="white--text"
@@ -70,18 +69,40 @@
                 </v-col>
             </v-row>
         </v-container>
+
+        <div class="text-center ma-2">
+            <v-snackbar
+                    v-model="snackbar"
+                    top
+                    :color="color"
+            >
+                {{ text }}
+                <v-btn
+                        color="white"
+                        text
+                        @click="snackbar = false"
+                >
+                    Close
+                </v-btn>
+            </v-snackbar>
+        </div>
     </div>
 </template>
 
 <script>
+    import emailjs from 'emailjs-com'
+
     export default {
         data() {
             return {
-                name: '',
+                message: '',
                 contentRules: [
                     v => !!v || '내용을 입력해주세요!',
                 ],
+                text: '',
+                snackbar: false,
                 email: '',
+                color: '',
                 emailRules: [
                     v => !!v || '이메일을 입력해주세요',
                     v => /.+@.+\..+/.test(v) || '이메일 형식으로 입력해주세요',
@@ -90,18 +111,33 @@
             }
         },
         methods: {
-            checkValidate(e) {
+            sendEmail(){
                 if (this.$refs.form.validate()) {
                     this.loading = true;
-                    return this.$refs.form.validate();
+                    const emailInfo = {email: this.email, message: this.message};
+                    emailjs.send('gmail', 'template_R5NrHmJt', emailInfo, 'user_3BLyEswN6xaEb6K5eJxwj')
+                        .then(() => {
+                            this.setSnackbar('info', '이메일이 전송되었습니다.');
+                            this.message = '';
+                            this.email = '';
+                            this.loading = false;
+                            this.$refs.form.resetValidation();
+                        }, () => {
+                            this.setSnackbar('error', '전송실패. 다시한번 더 시도해주세요.');
+                        });
                 }
-                e.preventDefault();
+            },
+            setSnackbar(color, text){
+                this.text = text;
+                this.color = color;
+                this.snackbar = true;
             }
         },
         created() {
             this.loading = false;
         }
     }
+
 </script>
 
 <style scoped>
